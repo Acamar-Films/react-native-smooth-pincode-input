@@ -11,8 +11,10 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
+  ImageStyle,
 } from "react-native";
 import * as Animatable from "react-native-animatable";
+import { CustomAnimation } from "react-native-animatable";
 
 interface SmoothPinCodeInputProps {
   value: string;
@@ -31,7 +33,9 @@ interface SmoothPinCodeInputProps {
   cellStyleFilled?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   textStyleFocused?: StyleProp<TextStyle>;
-  animationFocused?: string | object;
+  animationFocused?:
+    | string
+    | CustomAnimation<TextStyle & ViewStyle & ImageStyle>;
   onFulfill?: (code: string) => void;
   onTextChange?: (text: string) => void;
   onBackspace?: () => void;

@@ -1,0 +1,32 @@
+import React from "react";
+import { TextInputProps, StyleProp, ViewStyle, TextStyle, ImageStyle } from "react-native";
+import { CustomAnimation } from "react-native-animatable";
+interface SmoothPinCodeInputProps {
+    value: string;
+    codeLength?: number;
+    cellSize?: number;
+    cellSpacing?: number;
+    placeholder?: string | React.ReactElement;
+    mask?: string | React.ReactElement;
+    maskDelay?: number;
+    password?: boolean;
+    autoFocus?: boolean;
+    restrictToNumbers?: boolean;
+    containerStyle?: StyleProp<ViewStyle>;
+    cellStyle?: StyleProp<ViewStyle>;
+    cellStyleFocused?: StyleProp<ViewStyle>;
+    cellStyleFilled?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
+    textStyleFocused?: StyleProp<TextStyle>;
+    animationFocused?: string | CustomAnimation<TextStyle & ViewStyle & ImageStyle>;
+    onFulfill?: (code: string) => void;
+    onTextChange?: (text: string) => void;
+    onBackspace?: () => void;
+    keyboardType?: TextInputProps["keyboardType"];
+    editable?: boolean;
+    inputProps?: Partial<TextInputProps>;
+    testID?: string;
+    disableFullscreenUI?: boolean;
+}
+declare const SmoothPinCodeInput: React.FC<SmoothPinCodeInputProps>;
+export default SmoothPinCodeInput;
