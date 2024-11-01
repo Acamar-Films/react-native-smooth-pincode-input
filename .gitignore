@@ -27,7 +27,15 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-# Ignore all .yarn
-.yarn
+# Yarn
 .yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarn-cache
+.yarnrc
+.yarn-integrity
 
